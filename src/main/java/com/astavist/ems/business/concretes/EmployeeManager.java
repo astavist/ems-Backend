@@ -52,11 +52,15 @@ public class EmployeeManager implements EmployeeService {
 
     @Override
     public UpdateEmployeesResponse update(UUID id, UpdateEmployeesRequest request) {
-        return null;
+        Employee employee = mapper.map(request,Employee.class);
+        employee.setEmployeeID(request.getEmployeeID());
+        repository.save(employee);
+        UpdateEmployeesResponse response = mapper.map(employee,UpdateEmployeesResponse.class);
+        return response;
     }
 
     @Override
     public void delete(UUID id) {
-
+        repository.deleteById(id);
     }
 }
