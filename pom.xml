@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.astavist</groupId>
-	<artifactId>ems</artifactId>
+	<artifactId>ems-Backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ems</name>
 	<description>Employee Management System</description>
